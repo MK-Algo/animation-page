@@ -1,0 +1,92 @@
+.footer {
+  padding: 5rem;
+  width: 100%;
+  &-nav {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 2rem;
+
+    &__list {
+      margin-top: 4rem;
+      color: white;
+      font-family: "Yu Mincho Light";
+      text-align: center;
+      font-size: 2.2rem;
+      line-height: 2.5;
+    }
+  }
+  &__logo {
+    img {
+      width: 100%;
+      display: block;
+      margin: 0 auto;
+    }
+
+    @include media('sp') {
+      width: 18rem;;
+    }
+  }
+
+  &-content {
+    color: white;
+    margin-top: 2rem;
+    margin-bottom: 8rem;
+    h3 {
+      font-family: 'TA-engeifude';
+      font-size: 4rem;
+    }
+    p {
+      font-family: "Yu Mincho Light";
+      font-family: 2.4rem;
+    }
+  }
+
+  &-contact {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 2rem;
+    .sns-nav {
+      display: flex;
+      align-items: center;
+      gap: 2rem;
+
+      img {
+        width: 4rem;
+      }
+    }
+    
+    .footer-reserve {
+      color: white;
+      font-family: "YujiSyuku-Regular";
+      font-size: 3.2rem;
+    }
+  }
+
+  &-info {
+    display: flex;
+    justify-content: space-between;
+    padding: 2rem;
+    color: white;
+    font-family: "Yu Mincho Light";
+    .info__list {
+      display: flex;
+      gap: 3rem;
+      @include media('sp') {
+        margin-top: 2rem;
+      }
+    }
+
+    .info__copyright {
+      @include media('sp') {
+        margin-top: 2rem;
+      }
+    }
+
+    @include media('sp') {
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+}

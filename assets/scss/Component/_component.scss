@@ -1,0 +1,259 @@
+.c-title {
+  color: white;
+  font-size: 4rem;
+  min-height: 0vw;
+  margin: 3rem auto;
+  font-family: "KouzanBrushFontGyousyoOTF";
+}
+
+.c-vertical {
+  writing-mode: vertical-rl;
+  font-feature-settings: "pkna";
+  line-height: 1.5;
+}
+
+.loop {
+  animation: loopAnim 60s linear infinite;
+}
+
+.loop2 {
+  animation: loopAnim 65s linear infinite;
+}
+
+.loop3 {
+  animation: loopAnim 80s linear infinite;
+}
+
+@keyframes loopAnim {
+  0% {
+    transform: translate3d(0, 0, 0);
+  }
+
+  100% {
+    transform: translate3d(-100%, 0, 0);
+  }
+}
+
+.jp-xl {
+  font-size: 3.8rem;
+  font-family: "Yu Mincho Light";
+}
+
+.jp-base {
+  font-size: 2rem;
+  font-family: "Yu Mincho Light";
+}
+
+.mt-50 {
+  margin-top: 5rem !important;
+}
+
+.mt-100 {
+  margin-top: 10rem !important;
+}
+
+.mt-150 {
+  margin-top: 15rem !important;
+}
+
+.mt-200 {
+  margin-top: 20rem !important;
+}
+
+.title01 {
+  position: absolute;
+  left: 425px;
+  top: 80px;
+}
+
+.title02 {
+  position: absolute;
+  left: 855px;
+  top: 520px;
+}
+
+.title03 {
+  position: absolute;
+  left: 1375px;
+  top: 350px;
+}
+
+.title04 {
+  position: absolute;
+  left: 1975px;
+  top: 180px;
+}
+
+.title05 {
+  position: absolute;
+  left: 2125px;
+  top: 580px;
+}
+
+.title06 {
+  position: absolute;
+  left: 2770px;
+  top: 85px;
+}
+
+.title07 {
+  position: absolute;
+  left: 3190px;
+  top: 470px;
+}
+
+.image01 {
+  position: absolute;
+  left: 50px;
+  top: 50px;
+}
+
+.image02 {
+  position: absolute;
+  left: 480px;
+  top: 500px;
+}
+
+.image03 {
+  position: absolute;
+  left: 1000px;
+  top: 330px;
+}
+
+.image04 {
+  position: absolute;
+  left: 1600px;
+  top: 150px;
+}
+
+.image05 {
+  position: absolute;
+  left: 1750px;
+  top: 550px;
+}
+
+.image06 {
+  position: absolute;
+  left: 2400px;
+  top: 50px;
+}
+
+.image07 {
+  position: absolute;
+  left: 2820px;
+  top: 450px;
+}
+
+.text01 {
+  position: absolute;
+  left: 350px;
+  top: 20px;
+}
+
+.text02 {
+  position: absolute;
+  left: 180px;
+  top: 300px;
+}
+
+.text03 {
+  position: absolute;
+  left: 100px;
+  top: 600px;
+}
+
+.text04 {
+  position: absolute;
+  left: 270px;
+  bottom: 10px;
+}
+
+.text05 {
+  position: absolute;
+  left: 530px;
+  top: 470px;
+}
+
+.text06 {
+  position: absolute;
+  left: 650px;
+  top: 200px;
+}
+
+.text07 {
+  position: absolute;
+  left: 850px;
+  top: 80px;
+}
+
+.text08 {
+  position: absolute;
+  left: 780px;
+  top: 720px;
+}
+
+.text09 {
+  position: absolute;
+  left: 1080px;
+  top: 580px;
+}
+
+.text10 {
+  position: absolute;
+  left: 1200px;
+  top: 280px;
+}
+
+.text10 {
+  position: absolute;
+  left: 1680px;
+  top: 90px;
+}
+
+.text11 {
+  position: absolute;
+  left: 1650px;
+  top: 600px;
+}
+
+.text12 {
+  position: absolute;
+  left: 1740px;
+  top: 410px;
+}
+
+.text13 {
+  position: absolute;
+  left: 1875px;
+  bottom: 75px;
+}
+
+.text14 {
+  position: absolute;
+  left: 2515px;
+  top: 300px;
+}
+
+.text15 {
+  position: absolute;
+  left: 2950px;
+  top: 710px;
+}
+
+.text16 {
+  position: absolute;
+  left: 2700px;
+  top: 500px;
+}
+
+.text17 {
+  position: absolute;
+  left: 2900px;
+  top: 300px;
+}
+
+.text18 {
+  position: absolute;
+  left: 2350px;
+  bottom: 200px;
+}
