@@ -3267,6 +3267,8 @@ body {
 .mainvisual__logo img {
   width: 100%;
   height: auto;
+  object-fit: cover;
+  object-position: center center;
 }
 @media only screen and (max-width: 640px) {
   .mainvisual__logo {
@@ -3425,6 +3427,15 @@ body {
 }
 .sec-fragrance .fragrance__container img {
   width: 100%;
+}
+.sec-fragrance .fragrance__container .fragrance__title {
+  margin: 3rem auto;
+  text-align: center;
+}
+@media only screen and (max-width: 640px) {
+  .sec-fragrance .fragrance__container .fragrance__title {
+    margin: 8rem;
+  }
 }
 .sec-fragrance .fragrance__container .fragrance__text {
   padding: 10rem 15rem;
