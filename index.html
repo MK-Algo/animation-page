@@ -29,8 +29,26 @@
   <script src="//cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
 </head>
 
-<body>
-
+<body id="top" class="top">
+  <div class="reservation-item wow fadeIn" data-wow-delay="3s">
+    <a href="#">| ご購入へ |</a>
+  </div>
+  <header class="header">
+    <div class="header__wrapper">
+      <div class="header__logo">
+        <a href="/">ROUGETSU</a>
+      </div>
+      <ul class="lang-nav">
+        <li class="lang__item">
+          <strong>日</strong>
+        </li>
+        <span class="slash__item">/</span>
+        <li class="lang__item">
+          <a href="/en">ENG</a>
+        </li>
+      </ul>
+    </div>
+  </header>
   <main id="main">
     <section class="mainvisual">
       <h1 class="mainvisual__logo">
@@ -474,7 +492,7 @@
           <a href="#">個人情報保護方針</a>
         </li>
         <li class="info__item">
-          <a href="#">日</a> / <a href="#">ENG</a>
+          <strong>日</strong> / <a href="/en">ENG</a>
         </li>
       </ul>
       <p class="info__copyright">
@@ -486,7 +504,6 @@
   <script src="./assets/js/script.js"></script>
   <script src="./assets/js/wow.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-  <script src="./assets/js/main.js"></script>
 </body>
 
 </html>

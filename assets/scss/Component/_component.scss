@@ -2,8 +2,14 @@
   color: white;
   font-size: 4rem;
   min-height: 0vw;
+  text-align: center;
   margin: 3rem auto;
   font-family: "KouzanBrushFontGyousyoOTF";
+
+  &:lang(en) {
+    font-family: "AGaramondPro";
+    margin: 1rem auto;
+  }
 }
 
 .c-vertical {

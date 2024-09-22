@@ -1,6 +1,5 @@
 html {
 	scroll-behavior: smooth;
-	font-family: 'Noto Sans JP', sans-serif;
 	font-weight: 600;
 	height: 100%;
   background-color: #010101;
@@ -8,6 +7,7 @@ html {
 }
 
 body {
+  position: relative;
 	margin: 0;
 	min-height: 100%;
 	display: flex;
@@ -15,11 +15,84 @@ body {
   overflow-x: hidden;
 }
 
+body#top::before {
+  background: url(../img/bg-body.png) center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-color: #000;
+  content: "";
+  display: block;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  width: 100%;
+  height: 100vh;
+  opacity: 0.95;
+}
+
+.reservation-item {
+  writing-mode: vertical-rl;
+  position: fixed;
+  color: white;
+  height: 100%;
+  width: 150px;
+  right: 0;
+  bottom: auto;
+  z-index: 99;
+
+  a {
+    position: absolute;
+    text-decoration: none;
+    transition: all 0.3s;
+    top: 50%;
+    right: 50%;
+    transform: translate(50%, -50%);
+    font-size: 3.5rem;
+    font-family: "YujiSyuku-Regular";
+
+    &:lang(en) {
+      font-family: "AGaramondPro";
+      letter-spacing: 0.3rem;
+    }
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    z-index: 99;
+    background: linear-gradient(to left, rgba(234, 234, 234, 0.4) 0%, rgba(234, 234, 234, 0.0001) 100%);
+    opacity: 0;
+    transition: all 0.3s;
+    pointer-events: none;
+  }
+
+  &:hover::before {
+    opacity: 1;
+  }
+
+  @include media('sp') {
+    writing-mode: unset;
+    width: 100%;
+    bottom: 0;
+    height: 100px;
+    &::before {
+      background: linear-gradient(rgba(0, 0, 0, 0.0001) 0%, rgba(0, 0, 0, 0.9) 100%);
+    }
+  }
+  
+}
+
 .mainvisual {
   position: relative;
   width: 100vw;
   height: 100vh;
   overflow: hidden;
+  background-color: #000;
+  z-index: 10;
   &__logo {
     width: 300px;
     height: auto;
@@ -78,6 +151,11 @@ body {
     width: 100%;
     margin: 25px auto;
 
+    &:lang(en) {
+      font-family: "AGaramondPro";
+      letter-spacing: 0.1rem;
+    }
+
     .list__item {
       position: relative;
       padding: 1rem;
@@ -105,8 +183,13 @@ body {
 
 .sec_about {
   .about__title {
+    padding: 8rem 0;
     margin: 3rem auto;
     text-align: center;
+
+    &:lang(en) {
+      padding: 10rem 0 2rem;
+    }
 
     @include media('sp') {
       margin: 8rem;
@@ -114,7 +197,7 @@ body {
   }
 
   .about__container {
-    margin: 3rem auto;
+    margin: 3rem auto 10rem;
     color: white;
     font-size: 2rem;
     font-family: "Yu Mincho Light";
@@ -126,6 +209,14 @@ body {
 
     @include media('sp') {
       padding: 0 5rem;
+    }
+
+    &:lang(en) {
+      font-family: "AGaramondPro";
+      word-break: break-word;
+      text-align: justify;
+      margin: 1rem auto;
+      padding: 3rem 25rem;
     }
   }
 }
@@ -140,7 +231,7 @@ body {
     }
 
     .discover__text {
-      padding: 10rem 15rem;
+      padding: 8rem 15rem;
       color: white;
       font-size: 2rem;
       font-family: "Yu Mincho Light";
@@ -152,6 +243,12 @@ body {
 
       @include media('sp') {
         padding: 3rem 0;
+      }
+
+      &:lang(en) {
+        font-family: "AGaramondPro";
+        word-break: break-word;
+        text-align: justify;
       }
     }
   }
@@ -223,10 +320,12 @@ body {
     }
 
     .fragrance__text {
-      padding: 10rem 15rem;
+      padding: 8rem 15rem;
       color: white;
       font-size: 2rem;
       font-family: "Yu Mincho Light";
+      word-break: break-word;
+      text-align: justify;
 
       p {
         margin: 1.5rem 0;
@@ -234,7 +333,13 @@ body {
       }
 
       @include media('sp') {
-        padding: 3rem 0;
+        padding: 0 0 3rem;
+      }
+
+      &:lang(en) {
+        font-family: "AGaramondPro";
+        margin: 1rem auto;
+        padding: 3rem 15rem;
       }
     }
   }

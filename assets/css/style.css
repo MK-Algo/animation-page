@@ -14,6 +14,10 @@
   font-family: "YujiSyuku-Regular";
   src: url("../fonts/YujiSyuku-Regular.ttf") format("truetype");
 }
+@font-face {
+  font-family: "AGaramondPro";
+  src: url("../fonts/AGaramondPro-Regular.ttf") format("truetype");
+}
 *,
 *:before,
 *:after {
@@ -449,8 +453,13 @@ figure img,
   color: white;
   font-size: 4rem;
   min-height: 0vw;
+  text-align: center;
   margin: 3rem auto;
   font-family: "KouzanBrushFontGyousyoOTF";
+}
+.c-title:lang(en) {
+  font-family: "AGaramondPro";
+  margin: 1rem auto;
 }
 
 .c-vertical {
@@ -3005,71 +3014,30 @@ figure img,
 }
 
 .header {
+  position: fixed;
   width: 100%;
-  background: transparent;
+  height: auto;
   color: #FFFFFF;
-  background-color: #FFFFFF;
-  z-index: 0;
+  z-index: 999;
+  padding: 4rem 8rem;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.5984768908) 0%, rgba(0, 0, 0, 0) 100%);
+}
+.header__wrapper {
   display: flex;
-  flex-direction: column;
-}
-.header-logo {
-  padding: 11px 50px 12px;
-  height: 60px;
-}
-@media only screen and (max-width: 640px) {
-  .header-logo {
-    padding: 13px 50px 12px 0;
-  }
-}
-.header-logo img {
-  height: 18px;
-  width: 129px;
-}
-.header-content {
-  background-color: #0AE;
-}
-.header-content-wrapper {
-  display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
-  gap: 50px;
 }
-@media only screen and (max-width: 640px) {
-  .header-content-wrapper {
-    gap: 4rem;
-  }
+.header__logo {
+  font-family: "TA-engeifude";
+  font-size: 4rem;
+  letter-spacing: 0.5rem;
 }
-.header-content-tit {
-  font-size: 5rem;
-  font-style: normal;
-  font-weight: 800;
-  line-height: normal;
-  letter-spacing: 0.3rem;
+.header .lang-nav {
+  display: flex;
+  font-family: "Yu Mincho Light";
 }
-@media only screen and (max-width: 640px) {
-  .header-content-tit {
-    font-size: 3.2rem;
-  }
-}
-.header-content-sub {
-  text-align: center;
-  font-size: 2.5rem;
-}
-@media only screen and (max-width: 640px) {
-  .header-content-sub {
-    font-size: 1.6rem;
-  }
-}
-.header-content-img {
-  height: 25rem;
-  margin-top: 3rem;
-}
-@media only screen and (max-width: 640px) {
-  .header-content-img {
-    height: 16rem;
-    margin-top: 1.5rem;
-  }
+.header .lang-nav .slash__item {
+  margin: 0 1rem;
 }
 
 .mobile-nav-toggle {
@@ -3234,7 +3202,6 @@ body.mobile-nav-active #mobile-nav {
 
 html {
   scroll-behavior: smooth;
-  font-family: "Noto Sans JP", sans-serif;
   font-weight: 600;
   height: 100%;
   background-color: #010101;
@@ -3242,6 +3209,7 @@ html {
 }
 
 body {
+  position: relative;
   margin: 0;
   min-height: 100%;
   display: flex;
@@ -3249,11 +3217,80 @@ body {
   overflow-x: hidden;
 }
 
+body#top::before {
+  background: url(../img/bg-body.png) center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-color: #000;
+  content: "";
+  display: block;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  width: 100%;
+  height: 100vh;
+  opacity: 0.95;
+}
+
+.reservation-item {
+  writing-mode: vertical-rl;
+  position: fixed;
+  color: white;
+  height: 100%;
+  width: 150px;
+  right: 0;
+  bottom: auto;
+  z-index: 99;
+}
+.reservation-item a {
+  position: absolute;
+  text-decoration: none;
+  transition: all 0.3s;
+  top: 50%;
+  right: 50%;
+  transform: translate(50%, -50%);
+  font-size: 3.5rem;
+  font-family: "YujiSyuku-Regular";
+}
+.reservation-item a:lang(en) {
+  font-family: "AGaramondPro";
+  letter-spacing: 0.3rem;
+}
+.reservation-item::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  z-index: 99;
+  background: linear-gradient(to left, rgba(234, 234, 234, 0.4) 0%, rgba(234, 234, 234, 0.0001) 100%);
+  opacity: 0;
+  transition: all 0.3s;
+  pointer-events: none;
+}
+.reservation-item:hover::before {
+  opacity: 1;
+}
+@media only screen and (max-width: 640px) {
+  .reservation-item {
+    writing-mode: unset;
+    width: 100%;
+    bottom: 0;
+    height: 100px;
+  }
+  .reservation-item::before {
+    background: linear-gradient(rgba(0, 0, 0, 0.0001) 0%, rgba(0, 0, 0, 0.9) 100%);
+  }
+}
+
 .mainvisual {
   position: relative;
   width: 100vw;
   height: 100vh;
   overflow: hidden;
+  background-color: #000;
+  z-index: 10;
 }
 .mainvisual__logo {
   width: 300px;
@@ -3308,6 +3345,10 @@ body {
   width: 100%;
   margin: 25px auto;
 }
+.sec_news .news__list:lang(en) {
+  font-family: "AGaramondPro";
+  letter-spacing: 0.1rem;
+}
 .sec_news .news__list .list__item {
   position: relative;
   padding: 1rem;
@@ -3330,8 +3371,12 @@ body {
 }
 
 .sec_about .about__title {
+  padding: 8rem 0;
   margin: 3rem auto;
   text-align: center;
+}
+.sec_about .about__title:lang(en) {
+  padding: 10rem 0 2rem;
 }
 @media only screen and (max-width: 640px) {
   .sec_about .about__title {
@@ -3339,7 +3384,7 @@ body {
   }
 }
 .sec_about .about__container {
-  margin: 3rem auto;
+  margin: 3rem auto 10rem;
   color: white;
   font-size: 2rem;
   font-family: "Yu Mincho Light";
@@ -3354,6 +3399,13 @@ body {
     padding: 0 5rem;
   }
 }
+.sec_about .about__container:lang(en) {
+  font-family: "AGaramondPro";
+  word-break: break-word;
+  text-align: justify;
+  margin: 1rem auto;
+  padding: 3rem 25rem;
+}
 
 .sec-discover .discover__container {
   width: 85%;
@@ -3363,7 +3415,7 @@ body {
   width: 100%;
 }
 .sec-discover .discover__container .discover__text {
-  padding: 10rem 15rem;
+  padding: 8rem 15rem;
   color: white;
   font-size: 2rem;
   font-family: "Yu Mincho Light";
@@ -3376,6 +3428,11 @@ body {
   .sec-discover .discover__container .discover__text {
     padding: 3rem 0;
   }
+}
+.sec-discover .discover__container .discover__text:lang(en) {
+  font-family: "AGaramondPro";
+  word-break: break-word;
+  text-align: justify;
 }
 
 .sec-hospitality {
@@ -3438,10 +3495,12 @@ body {
   }
 }
 .sec-fragrance .fragrance__container .fragrance__text {
-  padding: 10rem 15rem;
+  padding: 8rem 15rem;
   color: white;
   font-size: 2rem;
   font-family: "Yu Mincho Light";
+  word-break: break-word;
+  text-align: justify;
 }
 .sec-fragrance .fragrance__container .fragrance__text p {
   margin: 1.5rem 0;
@@ -3449,8 +3508,13 @@ body {
 }
 @media only screen and (max-width: 640px) {
   .sec-fragrance .fragrance__container .fragrance__text {
-    padding: 3rem 0;
+    padding: 0 0 3rem;
   }
+}
+.sec-fragrance .fragrance__container .fragrance__text:lang(en) {
+  font-family: "AGaramondPro";
+  margin: 1rem auto;
+  padding: 3rem 15rem;
 }
 
 .footer {
@@ -3471,6 +3535,9 @@ body {
   text-align: center;
   font-size: 2.2rem;
   line-height: 2.5;
+}
+.footer-nav__list:lang(en) {
+  font-family: "AGaramondPro";
 }
 .footer__logo img {
   width: 100%;
@@ -3495,6 +3562,9 @@ body {
   font-family: "Yu Mincho Light";
   font-family: 2.4rem;
 }
+.footer-content p:lang(en) {
+  font-family: "AGaramondPro";
+}
 .footer-contact {
   display: flex;
   justify-content: space-between;
@@ -3513,6 +3583,10 @@ body {
   font-family: "YujiSyuku-Regular";
   font-size: 3.2rem;
 }
+.footer-contact .footer-reserve:lang(en) {
+  font-family: "AGaramondPro";
+  letter-spacing: 0.15rem;
+}
 .footer-info {
   display: flex;
   justify-content: space-between;
@@ -3529,10 +3603,16 @@ body {
     margin-top: 2rem;
   }
 }
+.footer-info .info__list:lang(en) {
+  font-family: "AGaramondPro";
+}
 @media only screen and (max-width: 640px) {
   .footer-info .info__copyright {
     margin-top: 2rem;
   }
+}
+.footer-info .info__copyright:lang(en) {
+  font-family: "AGaramondPro";
 }
 @media only screen and (max-width: 640px) {
   .footer-info {
