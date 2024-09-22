@@ -3340,6 +3340,7 @@ body#top::before {
   font-family: "Yu Mincho Light";
   font-weight: 500;
   font-size: 2rem;
+  margin-bottom: 10rem;
 }
 .sec_news .news__list {
   width: 100%;
