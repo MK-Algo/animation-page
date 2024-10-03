@@ -13,8 +13,6 @@ $(".slider").slick({
   pauseOnFocus: false,
 });
 
-console.log("here");
-
 window.addEventListener("scroll", function () {
   const scrollTop = window.scrollY || document.documentElement.scrollTop;
   const maxScroll = document.documentElement.scrollHeight - window.innerHeight;

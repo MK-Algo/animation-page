@@ -105,7 +105,7 @@ body#top::before {
     img {
       width: 100%;
       height: auto;
-      object-fit: cover;
+      object-fit: contain;
       object-position: center center;
     }
 
@@ -120,9 +120,8 @@ body#top::before {
       position: relative;
       z-index: 1;
       img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
+        width: 100vw;
+        height: 100vh;
       }
       &.slick-active img {
         animation: zoomAnimation 10s ease-out forwards;
