@@ -3414,6 +3414,8 @@ body#top::before {
 }
 .sec-discover .discover__container img {
   width: 100%;
+  object-fit: cover;
+  object-position: center center;
 }
 .sec-discover .discover__container .discover__text {
   padding: 8rem 15rem;
